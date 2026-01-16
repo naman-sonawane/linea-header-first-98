@@ -118,4 +118,34 @@
   body {
     @apply bg-background text-foreground font-light;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Audiowide', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+}
+
+@font-face {
+  font-family: 'dancing_script';
+  src: url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
 }

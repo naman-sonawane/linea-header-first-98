@@ -1,9 +1,15 @@
 import { Clock, Sparkles, Infinity } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const pricingTiers = [
   {
-    name: "Standard",
+    name: "STANDARD",
     price: "$∞",
     tagline: "For everyday heroes",
     features: [
@@ -15,7 +21,7 @@ const pricingTiers = [
     highlighted: false
   },
   {
-    name: "Premium",
+    name: "PREMIUM",
     price: "$∞∞",
     tagline: "Most popular",
     features: [
@@ -28,8 +34,8 @@ const pricingTiers = [
     highlighted: true
   },
   {
-    name: "Literary Hero",
-    price: "Priceless",
+    name: "LITERARY HERO",
+    price: "PRICELESS",
     tagline: "For tragic protagonists",
     features: [
       "5 minutes of frozen time",
@@ -43,89 +49,153 @@ const pricingTiers = [
 ];
 
 const CallToAction = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const cards = sectionRef.current?.querySelectorAll(".pricing-card");
+    cards?.forEach((card, index) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card as Element,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        },
+        opacity: 0,
+        y: 100,
+        scale: 0.9,
+        duration: 1,
+        delay: index * 0.15,
+        ease: "power3.out"
+      });
+    });
+  }, []);
+
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-900 to-slate-800">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span className="text-cyan-400 text-sm font-medium">Limited Time Offer</span>
-            <span className="text-slate-500 text-sm">(Ironic, we know)</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Get Your STOP-watch Today
+    <section ref={sectionRef} id="cta" className="py-32 bg-black text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-500/10 via-transparent to-cyan-500/10" />
+      </div>
+
+      <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", delay: 0.2 }}
+            className="inline-flex items-center gap-3 px-6 py-3 border-2 border-cyan-400/50 bg-cyan-400/10 mb-8"
+          >
+            <Sparkles className="w-5 h-5 text-cyan-400" />
+            <span className="text-cyan-400 text-sm font-bold uppercase tracking-[0.2em]">LIMITED TIME OFFER</span>
+            <span className="text-gray-500 text-xs uppercase">(IRONIC, WE KNOW)</span>
+          </motion.div>
+          
+          <h2
+            className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight mb-8"
+            style={{ fontFamily: "'Audiowide', sans-serif" }}
+          >
+            GET YOUR
+            <br />
+            <span className="text-cyan-400">STOP-watch</span>
+            <br />
+            TODAY
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
             Don't wait until it's too late. Every second you delay is a second you might need back.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
           {pricingTiers.map((tier, index) => (
-            <div 
+            <motion.div
               key={index}
-              className={`relative rounded-2xl p-8 ${
-                tier.highlighted 
-                  ? 'bg-gradient-to-b from-cyan-500/20 to-slate-800 border-2 border-cyan-500/50' 
-                  : 'bg-slate-800/50 border border-slate-700/50'
-              }`}
+              className="pricing-card relative border-2 p-8 group transition-all duration-500"
+              style={{
+                borderColor: tier.highlighted ? "rgba(34, 211, 238, 0.5)" : "rgba(255, 255, 255, 0.1)",
+                backgroundColor: tier.highlighted ? "rgba(34, 211, 238, 0.05)" : "transparent"
+              }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
               {tier.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-cyan-500 text-slate-900 text-sm font-semibold rounded-full">
-                  Bestseller
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-cyan-400 text-black text-xs font-bold uppercase tracking-wider border-2 border-cyan-400">
+                  BESTSELLER
                 </div>
               )}
+              
               <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3
+                  className="text-2xl font-bold uppercase mb-3 tracking-wider"
+                  style={{ fontFamily: "'Audiowide', sans-serif" }}
+                >
                   {tier.name}
                 </h3>
-                <p className="text-slate-400 text-sm mb-4">
+                <p className="text-gray-400 text-xs mb-6">
                   {tier.tagline}
                 </p>
-                <div className="flex items-center justify-center gap-1">
-                  <span className="text-4xl font-bold text-cyan-400">
+                <div className="flex items-center justify-center gap-1 mb-8">
+                  <span
+                    className="text-5xl font-bold text-cyan-400"
+                    style={{ fontFamily: "'Audiowide', sans-serif" }}
+                  >
                     {tier.price}
                   </span>
                 </div>
               </div>
-              <ul className="space-y-3 mb-8">
+              
+              <ul className="space-y-4 mb-8">
                 {tier.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-300">
-                    <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                    <span className={feature.startsWith('*') ? 'text-sm text-slate-500 italic' : ''}>
+                  <li key={i} className="flex items-start gap-3 text-gray-300">
+                    <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-1" />
+                    <span className={`text-xs ${feature.startsWith('*') ? 'text-gray-500 italic' : ''}`}>
                       {feature}
                     </span>
                   </li>
                 ))}
               </ul>
-              <Button 
-                className={`w-full ${
-                  tier.highlighted 
-                    ? 'bg-cyan-500 hover:bg-cyan-400 text-slate-900' 
-                    : 'bg-slate-700 hover:bg-slate-600 text-white'
-                }`}
-              >
-                Order Now
-              </Button>
-            </div>
+              
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  className={`w-full border-2 rounded-none uppercase tracking-wider font-bold text-sm py-6 transition-all duration-300 ${
+                    tier.highlighted
+                      ? "bg-cyan-400 hover:bg-cyan-300 text-black border-cyan-400"
+                      : "bg-transparent hover:bg-white/10 text-white border-white/20 hover:border-white/40"
+                  }`}
+                >
+                  ORDER NOW
+                </Button>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
 
-        {/* Guarantee */}
-        <div className="text-center p-8 rounded-2xl bg-slate-800/30 border border-slate-700/30">
-          <Infinity className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-white mb-2">
-            The "No Tragic Ending" Guarantee
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center p-12 border-2 border-white/10 bg-black hover:border-cyan-400/50 transition-all duration-500"
+        >
+          <Infinity className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
+          <h3
+            className="text-3xl font-bold uppercase mb-4 tracking-wider"
+            style={{ fontFamily: "'Audiowide', sans-serif" }}
+          >
+            THE "NO TRAGIC ENDING" GUARANTEE
           </h3>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            If you still experience a tragic ending while using the STOP-watch, 
-            we'll refund your purchase in full. 
-            <span className="text-slate-500 text-sm block mt-2">
-              (Excludes tragedies caused by user error, hubris, or ignoring the ghost of your father)
-            </span>
+          <p className="text-gray-300 max-w-xl mx-auto text-sm leading-relaxed mb-4">
+            If you still experience a tragic ending while using the STOP-watch, we'll refund your purchase in full.
           </p>
-        </div>
+          <p className="text-gray-500 text-xs">
+            (Excludes tragedies caused by user error, hubris, or ignoring the ghost of your father)
+          </p>
+        </motion.div>
       </div>
     </section>
   );
