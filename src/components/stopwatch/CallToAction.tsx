@@ -120,7 +120,7 @@ const CallToAction = () => {
           </h3>
           <p className="text-slate-400 max-w-xl mx-auto">
             If you still experience a tragic ending while using the STOP-watch, 
-            we'll refund your purchase in full. Because at this price, what do you have to lose? 
+            we'll refund your purchase in full. 
             <span className="text-slate-500 text-sm block mt-2">
               (Excludes tragedies caused by user error, hubris, or ignoring the ghost of your father)
             </span>

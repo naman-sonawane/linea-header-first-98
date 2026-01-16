@@ -1,40 +1,48 @@
-import { User } from "lucide-react";
-
 const testimonials = [
   {
-    name: "Solomon Vandy",
+    name: "SOLOMON VANDY",
+    role: "Diamond miner, father",
     source: "Blood Diamond",
+    image: "https://www.spiritualityandpractice.com/uploads/film_reviews/images/blooddiamondlrg5.jpg",
     before: "My son Dia was brainwashed by rebels. When I finally found him, he didn't recognize me. Rebels pointed guns at me. I had no time to talk to him privately, to remind him who he really was. I was desperate, and any wrong move meant death for both of us.",
     after: "I froze time the moment I saw Dia pointing a gun at me. Those 5 minutes alone with my son—no rebels watching, no pressure—I held him and reminded him of our village, our family, the stories I used to tell him. When time resumed, he lowered the gun. He came home with me. We're together now.",
-    theme: "The STOP-watch gives you what war takes away: the chance to reach someone you love."
+    visual: "Solomon and Dia embracing, gun lowered on the ground"
   },
   {
-    name: "Hamlet",
-    source: "Hamlet by Shakespeare",
-    before: "I heard a noise behind the tapestry in my mother's chamber. Rage consumed me—I was certain it was Claudius spying on us. I stabbed through the curtain without thinking. It was Polonius. That one impulsive moment destroyed everything: Ophelia went mad and drowned. Laertes challenged me to a duel. My mother drank poison. We all died.",
-    after: "When I heard the noise, I froze time. I walked to the tapestry and looked behind it—just Polonius, eavesdropping as usual. Those 5 minutes let me calm the fire in my blood. I chose NOT to kill him. Ophelia lived. Laertes and I never fought. My mother never touched that poisoned cup. One pause saved six lives.",
-    theme: "The difference between tragedy and survival is often just 5 minutes of clarity."
+    name: "HAMLET",
+    role: "Prince of Denmark",
+    source: "Hamlet",
+    image: "https://i.imgur.com/4Mjort6.jpeg",
+    before: "I heard a noise behind the tapestry while speaking to my mother. I acted before I thought — I stabbed through the curtain. It was Polonius.\n\nThat one moment destroyed everything. Ophelia went into madness and possibly committed suicide. Laertes challenged me to the death. Both of us died, along with Gertrude.",
+    after: "With the STOP-watch, when I heard the noise, I could freeze time. I'd look behind the tapestry to see who is there. Those five minutes would give me time to meditate on what my next course of action would be.\n\nThis prevents Ophelia's madness, Polonius's death, Laertes' and my deaths, and Gertrude's death. The battle would never occur.",
+    visual: "Hamlet pausing, hand on tapestry, NOT stabbing"
   },
   {
-    name: "Amir",
+    name: "AMIR",
+    role: "Author",
     source: "The Kite Runner",
-    before: "To rescue Sohrab from the Taliban, I had to face Assef—the same monster who assaulted Hassan decades ago. He beat me nearly to death while his guards watched. I spent weeks in the hospital. Even now, my face bears the scars of that day. Sohrab was so traumatized he attempted suicide.",
-    after: "I froze time the moment I entered that room with Assef. In 5 quiet minutes, I walked Sohrab past the frozen guards, out the door, into my car. We drove away while Assef stood frozen mid-sentence. No fight. No broken bones. No trauma. Just two people escaping their past, finally free.",
-    theme: "Redemption doesn't require suffering. Sometimes it just requires a moment to act."
+    image: "https://ncowie.wordpress.com/wp-content/uploads/2012/08/amir.jpg",
+    before: "When I went to free Sohrab, I met Assef. He was accompanied by other Taliban members — I was in a very tight position. I had to fight Assef to the death in order to leave with Sohrab.",
+    after: "With the STOP-watch, I froze time. In the five minutes, Sohrab and I escaped and got in the car. We drove away without any physical altercation. This prevented me from getting hospitalized due to my injuries.",
+    visual: "Amir and Sohrab in a car, driving away safely"
   },
   {
-    name: "Werner Pfennig",
+    name: "WERNER PFENNIG",
+    role: "German soldier",
     source: "All the Light We Cannot See",
-    before: "I stepped on a landmine. The click beneath my boot told me everything—any movement and I would explode. I stood frozen, not by choice but by terror, knowing these were my final moments. I was sixteen years old, and I was going to die in a war I never believed in.",
-    after: "I froze time the instant I felt the mine click. In those 5 minutes, I carefully lifted my foot and ran. I ran until I was far enough away that when time resumed and the mine exploded, I felt only the shockwave at my back. The watch saved my life. I got to see the end of the war.",
-    theme: "War steals futures. The STOP-watch gave Werner his back."
+    image: "https://i.imgur.com/1vdQJd8.png",
+    before: "I stepped on a landmine. Once I took the weight off, the mine would go off and I would die. There was no escape.",
+    after: "With the STOP-watch, I froze time, giving me the ability to step off the landmine with no consequences and get far enough away from the mine to not be affected by the explosion once time resumes.",
+    visual: "Werner walking away from an explosion in the distance"
   },
   {
-    name: "Offred",
+    name: "OFFRED",
+    role: "Handmaid",
     source: "The Handmaid's Tale",
-    before: "Every moment of my life is watched. Trips to the Commander's study risk discovery by Serena Joy. Eyes follow me everywhere—Guardians, Marthas, other Handmaids who might report me. I have no privacy, no autonomy, no way to gather information about the resistance or the outside world. I am a prisoner in my own body.",
-    after: "I freeze time to move through the house unseen. In 5 minutes, I search the Commander's office for documents about the resistance. I slip into rooms I'm forbidden to enter. I return to my position before anyone knows I moved. Those 5 minutes give me back something Gilead stole: agency over my own existence.",
-    theme: "Surveillance only works if you can't stop time. Offred learned to disappear."
+    image: "https://imgix.bustle.com/2017/4/20/17e60f76-757a-40ff-a10e-81913aa87893.jpg?w=1200&h=1200&fit=crop&crop=faces&fm=jpg",
+    before: "During my time in Gilead, I went to the Commander's room frequently. Every step was a risk — Serena Joy could catch me at any moment.",
+    after: "With the STOP-watch, I could freeze time to ensure that I make it in undetected by anyone. While in the room, I could snoop around and dig for any information on the outside world, giving me a better understanding of what is truly going on.\n\nFor the first time, I had control.",
+    visual: "Offred moving through a frozen hallway, confident"
   }
 ];
 
@@ -43,14 +51,11 @@ const CharacterTestimonials = () => {
     <section id="testimonials" className="py-24 bg-gradient-to-b from-slate-800 to-slate-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-cyan-400 font-medium uppercase tracking-wider text-sm">
-            Real Results
-          </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-            Character Testimonials
+            Don't Just Take Our Word For It
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Hear from those who used the STOP-watch to rewrite their tragic endings.
+            Hear from those who needed it most.
           </p>
         </div>
 
@@ -60,18 +65,27 @@ const CharacterTestimonials = () => {
               key={index}
               className="bg-slate-800/50 rounded-3xl border border-slate-700/50 overflow-hidden"
             >
-              {/* Header */}
-              <div className="p-6 md:p-8 border-b border-slate-700/50 flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-cyan-500/20 flex items-center justify-center">
-                  <User className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-cyan-400">
-                    {testimonial.source}
-                  </p>
+              {/* Header with image */}
+              <div className="p-6 md:p-8 border-b border-slate-700/50">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-cyan-500/30 flex-shrink-0">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center md:text-left flex-1">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">
+                      {testimonial.name}
+                    </h3>
+                    <p className="text-slate-300 mb-1">
+                      {testimonial.role}
+                    </p>
+                    <p className="text-cyan-400">
+                      {testimonial.source}
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -80,29 +94,29 @@ const CharacterTestimonials = () => {
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-medium">
-                      Before STOP-watch
+                      Before STOP-watch:
                     </span>
                   </div>
-                  <p className="text-slate-300 leading-relaxed italic">
+                  <p className="text-slate-300 leading-relaxed whitespace-pre-line">
                     "{testimonial.before}"
                   </p>
                 </div>
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium">
-                      With STOP-watch
+                      With STOP-watch:
                     </span>
                   </div>
-                  <p className="text-slate-300 leading-relaxed italic">
+                  <p className="text-slate-300 leading-relaxed whitespace-pre-line">
                     "{testimonial.after}"
                   </p>
                 </div>
               </div>
 
-              {/* Theme */}
+              {/* Visual description */}
               <div className="p-6 md:p-8 bg-cyan-500/5 border-t border-slate-700/50">
-                <p className="text-cyan-300 font-medium text-center">
-                  {testimonial.theme}
+                <p className="text-cyan-300 text-sm italic text-center">
+                  [Visual: {testimonial.visual}]
                 </p>
               </div>
             </div>
