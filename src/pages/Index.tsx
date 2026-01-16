@@ -1,25 +1,37 @@
-import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
-import LargeHero from "../components/content/LargeHero";
-import FiftyFiftySection from "../components/content/FiftyFiftySection";
-import OneThirdTwoThirdsSection from "../components/content/OneThirdTwoThirdsSection";
-import ProductCarousel from "../components/content/ProductCarousel";
-import EditorialSection from "../components/content/EditorialSection";
+import StopwatchNavigation from "../components/stopwatch/StopwatchNavigation";
+import StopwatchFooter from "../components/stopwatch/StopwatchFooter";
+import HeroSection from "../components/stopwatch/HeroSection";
+import ProductFeatures from "../components/stopwatch/ProductFeatures";
+import ThemeConnection from "../components/stopwatch/ThemeConnection";
+import CharacterTestimonials from "../components/stopwatch/CharacterTestimonials";
+import CelebrityTestimonial from "../components/stopwatch/CelebrityTestimonial";
+import CallToAction from "../components/stopwatch/CallToAction";
+import Conclusion from "../components/stopwatch/Conclusion";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <div className="min-h-screen bg-slate-900 text-white">
+      <StopwatchNavigation />
       
-      <main className="pt-6">
-        <FiftyFiftySection />
-        <ProductCarousel />
-        <LargeHero />
-        <OneThirdTwoThirdsSection />
-        <EditorialSection />
+      <main>
+        <HeroSection />
+        <section id="features">
+          <ProductFeatures />
+        </section>
+        <section id="themes">
+          <ThemeConnection />
+        </section>
+        <CharacterTestimonials />
+        <section id="celebrity">
+          <CelebrityTestimonial />
+        </section>
+        <section id="cta">
+          <CallToAction />
+        </section>
+        <Conclusion />
       </main>
       
-      <Footer />
+      <StopwatchFooter />
     </div>
   );
 };
