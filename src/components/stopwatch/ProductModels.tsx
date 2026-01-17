@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const models = [
   {
-    name: "FF6",
+    name: "FF1",
     price: "$299",
     features: [
       "5 minutes of frozen time",
@@ -18,7 +18,7 @@ const models = [
     ]
   },
   {
-    name: "FF7",
+    name: "FF1",
     price: "$499",
     features: [
       "5 minutes of frozen time",
@@ -30,7 +30,7 @@ const models = [
     highlighted: true
   },
   {
-    name: "FFX",
+    name: "FF67",
     price: "$799",
     features: [
       "5 minutes of frozen time",
