@@ -18,7 +18,7 @@ const models = [
     ]
   },
   {
-    name: "FF1",
+    name: "FF2",
     price: "$499",
     features: [
       "5 minutes of frozen time",
