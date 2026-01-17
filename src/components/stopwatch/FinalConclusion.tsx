@@ -43,8 +43,8 @@ const FinalConclusion = () => {
 
         <div className="text-[1.5vw] text-[#adadad] leading-relaxed space-y-[2vh] mb-[6vh] text-left max-w-[70vw] mx-auto">
           <p>Every tragedy shares one thing: someone acted without time to think.</p>
-          <p>War, pressure, impulse, nature — they all steal the one thing we need most: a moment to breathe.</p>
-          <p>The STOP-watch gives you that moment.</p>
+          <p>War, pressure, impulse, nature, they all steal the one thing we need most: a moment to breathe.</p>
+          <p>FreezeFrame gives you that moment.</p>
           <p className="text-cyan-400 font-bold text-[2vw]">Five minutes can save a life.</p>
           <p className="text-cyan-400 font-bold text-[2vw]">Five minutes can win a championship.</p>
           <p className="text-cyan-400 font-bold text-[2vw]">Five minutes can change everything.</p>
@@ -64,7 +64,7 @@ const FinalConclusion = () => {
 
         <div className="text-[1.2vw] text-gray-500 space-y-[1vh]">
           <p className="font-bold text-[2vw] text-cyan-400 mb-[2vh]">
-            The STOP-watch — When 5 minutes can change your fate
+            FreezeFrame: When 5 minutes can change your fate
           </p>
           <div className="flex justify-center gap-[3vw] mt-[4vh]">
             <button className="text-cyan-400 hover:text-cyan-300 transition-colors text-[1.5vw] font-bold uppercase tracking-wider">

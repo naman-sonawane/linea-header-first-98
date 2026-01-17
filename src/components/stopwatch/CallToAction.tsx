@@ -102,7 +102,7 @@ const CallToAction = () => {
           >
             GET YOUR
             <br />
-            <span className="text-cyan-400">STOP-watch</span>
+            <span className="text-cyan-400">FreezeFrame</span>
             <br />
             TODAY
           </h2>
@@ -190,7 +190,7 @@ const CallToAction = () => {
             THE "NO TRAGIC ENDING" GUARANTEE
           </h3>
           <p className="text-gray-300 max-w-xl mx-auto text-sm leading-relaxed mb-4">
-            If you still experience a tragic ending while using the STOP-watch, we'll refund your purchase in full.
+            If you still experience a tragic ending while using FreezeFrame, we'll refund your purchase in full.
           </p>
           <p className="text-gray-500 text-xs">
             (Excludes tragedies caused by user error, hubris, or ignoring the ghost of your father)

@@ -10,20 +10,20 @@ const themes = [
   {
     theme: "THE PRESSURE OF TIME",
     description: "In moments of crisis, characters across literature are forced to make split-second decisions that determine their fate. Hamlet hears a noise and stabs blindly. Solomon confronts his brainwashed son with guns pointed at him. Werner steps on a landmine. Time itself becomes the enemy.",
-    quote: "\"Had I but time—as this fell sergeant, Death, is strict in his arrest—O, I could tell you...\"",
-    source: "— Hamlet, Act 5"
+    quote: "\"Had I but time, as this fell sergeant, Death, is strict in his arrest, O, I could tell you...\"",
+    source: "Hamlet, Act 5"
   },
   {
     theme: "IMPULSIVE DECISIONS",
     description: "Without time to process emotions, characters act on instinct. Hamlet's impulsive stabbing kills Polonius and sets off a chain reaction of deaths. Amir's fight with Assef nearly costs him his life. These moments of rashness become irreversible turning points.",
     quote: "\"A rat! Dead for a ducat, dead!\"",
-    source: "— Hamlet, before killing Polonius"
+    source: "Hamlet, before killing Polonius"
   },
   {
     theme: "LACK OF CONTROL",
-    description: "From Offred's constant surveillance to Werner's impossible position in war, these characters are trapped by circumstances beyond their control. They lack the autonomy to step back, to think, to choose their own path. The STOP-watch restores what was stolen: agency.",
+    description: "From Offred's constant surveillance to Werner's impossible position in war, these characters are trapped by circumstances beyond their control. They lack the autonomy to step back, to think, to choose their own path. FreezeFrame restores what was stolen: agency.",
     quote: "\"We lived, as usual, by ignoring. Ignoring isn't the same as ignorance, you have to work at it.\"",
-    source: "— Offred, The Handmaid's Tale"
+    source: "Offred, The Handmaid's Tale"
   }
 ];
 

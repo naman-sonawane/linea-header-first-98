@@ -8,22 +8,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const celebrities = [
   {
-    name: "ISIAH KINER-FALEFA",
-    title: "Professional Baseball Player",
-    image: "https://i.imgur.com/Us6m11L.jpeg",
-    quote: "As a professional athlete, every moment counts. The STOP-watch gives me those crucial seconds to think, to breathe, to make the right play when the pressure is at its highest."
-  },
-  {
-    name: "MALCOLM JAMAL-WARNER",
-    title: "Actor & Director",
-    image: "https://cdn.britannica.com/53/249453-050-C957022F/Malcolm-Jamal-Warner.jpg",
-    quote: "In an industry where every decision can make or break your career, having those 5 minutes to pause and reflect has been invaluable. The STOP-watch isn't just a tool—it's a game changer."
-  },
-  {
     name: "JEFF HOFFMAN",
-    title: "Entrepreneur & Investor",
+    title: "MLB Pitcher, Toronto Blue Jays",
     image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Jeff_Hoffman_%289tZfLF_3qzU%29.png",
-    quote: "In high-stakes business negotiations, timing is everything. The STOP-watch gives me the clarity I need to make the right decisions when seconds matter most."
+    quote: "In high-stakes moments, timing is everything. FreezeFrame gives me the clarity I need to make the right decisions when seconds matter most."
   }
 ];
 
@@ -78,7 +66,7 @@ const CelebrityTestimonial = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {celebrities.map((celebrity, index) => (
             <motion.div
               key={index}

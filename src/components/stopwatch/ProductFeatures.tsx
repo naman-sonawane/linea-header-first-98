@@ -11,7 +11,7 @@ const features = [
     icon: Clock,
     title: "FREEZE TIME",
     number: "01",
-    description: "Stop the world for up to 5 minutes. Only you can move—everyone and everything else is frozen in place."
+    description: "Stop the world for up to 5 minutes. Only you can move, everyone and everything else is frozen in place."
   },
   {
     icon: Heart,

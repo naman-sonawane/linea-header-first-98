@@ -51,7 +51,7 @@ const WhyItMatters = () => {
             Characters often found themselves in situations where they simply did not have enough time, or they were in high-pressure situations with no ability to act accordingly.
           </p>
           <p>
-            The STOP-watch alleviates the pressure, giving our beloved characters the precious time that they need to think and act.
+            FreezeFrame alleviates the pressure, giving our beloved characters the precious time that they need to think and act.
           </p>
         </div>
 

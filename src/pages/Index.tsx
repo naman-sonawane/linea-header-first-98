@@ -409,9 +409,10 @@ const Index = () => {
 
       <div id="page3" className="bg-[#232025] py-[26vh] px-[10vw_0_0_5vw]">
         <div id="finish" className="opacity-0">
-          <h1 className="text-[8vw] mb-[-4vh]">I USED THE</h1>
-          <h1 className="text-[8vw] mb-[-4vh]">FreezeFrame & REGRET</h1>
-          <h1 className="text-[8vw] mb-[-4vh]">NOTHING.</h1>
+          <h1 className="text-[7vw] mb-[-3vh]">I USED THE</h1>
+          <h1 className="text-[7vw] mb-[-3vh]">FreezeFrame</h1>
+          <h1 className="text-[7vw] mb-[-3vh]">AND REGRET</h1>
+          <h1 className="text-[7vw] mb-[-3vh]">NOTHING.</h1>
         </div>
         <div id="box" className="h-[30vh] mt-[15vh] flex relative border-t border-b border-[#cecece]">
           <div id="box1" className="w-[70vw] h-full border-r border-[#cecece] p-[5.5vh_5vw]">

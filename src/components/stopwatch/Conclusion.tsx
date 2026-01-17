@@ -95,8 +95,8 @@ const Conclusion = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase mb-12 leading-tight max-w-5xl mx-auto"
             style={{ fontFamily: "'Audiowide', sans-serif" }}
           >
-            WHETHER YOU'RE FACING WAR, FAMILY CRISIS, IMPOSSIBLE DECISIONS, OR JUST NEED A MOMENT TO BREATHE—
-            <span className="text-cyan-400 block mt-4">THE STOP-watch GIVES YOU WHAT EVERY TRAGIC HERO NEEDED:</span>
+            WHETHER YOU'RE FACING WAR, FAMILY CRISIS, IMPOSSIBLE DECISIONS, OR JUST NEED A MOMENT TO BREATHE,
+            <span className="text-cyan-400 block mt-4">FREEZEFRAME GIVES YOU WHAT EVERY TRAGIC HERO NEEDED:</span>
           </h2>
           <div
             ref={timeRef}

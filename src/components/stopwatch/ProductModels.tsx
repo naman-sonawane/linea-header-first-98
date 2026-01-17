@@ -56,7 +56,7 @@ const ProductModels = () => {
         className="text-center mb-[10vh]"
       >
         <h2
-          className="text-[5vw] md:text-[7vw] font-bold uppercase mb-[4vh] leading-tight"
+          className="text-[4vw] md:text-[5vw] font-bold uppercase mb-[3vh] leading-tight"
           style={{ fontFamily: "'Audiowide', sans-serif" }}
         >
           Choose Your Model

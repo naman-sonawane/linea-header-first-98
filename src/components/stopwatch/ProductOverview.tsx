@@ -27,7 +27,7 @@ const ProductOverview = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="product-overview" className="min-h-screen bg-[#232025] text-[#d1d1d1] py-[15vh] px-[6vw]">
+    <section ref={sectionRef} id="product-overview" className="bg-[#232025] text-[#d1d1d1] py-[8vh] px-[6vw]">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,16 +36,16 @@ const ProductOverview = () => {
         className="text-center mb-[10vh]"
       >
         <h2
-          className="text-[5vw] md:text-[7vw] font-bold uppercase mb-[4vh] leading-tight"
+          className="text-[4vw] md:text-[5vw] font-bold uppercase mb-[3vh] leading-tight"
           style={{ fontFamily: "'Audiowide', sans-serif" }}
         >
-          What Is The STOP-watch?
+          What Is FreezeFrame?
         </h2>
         <p className="text-[1.5vw] text-[#adadad] max-w-[60vw] mx-auto leading-relaxed">
-          The STOP-watch is a revolutionary device that freezes time for up to five minutes — except for you and one person of your choice.
+          FreezeFrame is a revolutionary device that freezes time for up to five minutes, except for you and one person of your choice.
         </p>
         <p className="text-[1.5vw] text-[#adadad] max-w-[60vw] mx-auto leading-relaxed mt-[2vh]">
-          While the world stands still, you have the clarity to think, the space to act, and the power to rewrite your story.
+          While the world stands still, you have the clarity to think, the space to act, and the power to rewrite your story or prevent tragedy.
         </p>
       </motion.div>
 

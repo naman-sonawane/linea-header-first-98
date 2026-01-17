@@ -8,23 +8,23 @@ const testimonials = [
     source: "Blood Diamond",
     image: "https://www.spiritualityandpractice.com/uploads/film_reviews/images/blooddiamondlrg5.jpg",
     before: "My son Dia was brainwashed by rebels. When I finally found him, he didn't recognize me. Rebels pointed guns at me. I had no time to talk to him privately, to remind him who he really was. I was desperate, and any wrong move meant death for both of us.",
-    after: "I froze time the moment I saw Dia pointing a gun at me. Those 5 minutes alone with my son—no rebels watching, no pressure—I held him and reminded him of our village, our family, the stories I used to tell him. When time resumed, he lowered the gun. He came home with me. We're together now."
+    after: "I froze time the moment I saw Dia pointing a gun at me. Those 5 minutes alone with my son, no rebels watching, no pressure, I held him and reminded him of our village, our family, the stories I used to tell him. When time resumed, he lowered the gun. He came home with me. We're together now."
   },
   {
     name: "HAMLET",
     role: "Prince of Denmark",
     source: "Hamlet",
     image: "https://i.imgur.com/4Mjort6.jpeg",
-    before: "I heard a noise behind the tapestry while speaking to my mother. I acted before I thought — I stabbed through the curtain. It was Polonius.\n\nThat one moment destroyed everything. Ophelia went into madness and possibly committed suicide. Laertes challenged me to the death. Both of us died, along with Gertrude.",
-    after: "With the STOP-watch, when I heard the noise, I could freeze time. I'd look behind the tapestry to see who is there. Those five minutes would give me time to meditate on what my next course of action would be.\n\nThis prevents Ophelia's madness, Polonius's death, Laertes' and my deaths, and Gertrude's death. The battle would never occur."
+    before: null,
+    after: "With FreezeFrame, when I heard the noise behind the tapestry, I could freeze time. I'd look behind the curtain to see who is there. Those five minutes would give me time to meditate on what my next course of action would be.\n\nThis prevents Ophelia's madness, Polonius's death, Laertes' and my deaths, and Gertrude's death. The battle would never occur."
   },
   {
     name: "AMIR",
     role: "Author",
     source: "The Kite Runner",
     image: "https://ncowie.wordpress.com/wp-content/uploads/2012/08/amir.jpg",
-    before: "When I went to free Sohrab, I met Assef. He was accompanied by other Taliban members — I was in a very tight position. I had to fight Assef to the death in order to leave with Sohrab.",
-    after: "With the STOP-watch, I froze time. In the five minutes, Sohrab and I escaped and got in the car. We drove away without any physical altercation. This prevented me from getting hospitalized due to my injuries."
+    before: "When I went to free Sohrab, I met Assef. He was accompanied by other Taliban members. I was in a very tight position. I had to fight Assef to the death in order to leave with Sohrab.",
+    after: "With FreezeFrame, I froze time. In the five minutes, Sohrab and I escaped and got in the car. We drove away without any physical altercation. This prevented me from getting hospitalized due to my injuries."
   },
   {
     name: "WERNER PFENNIG",
@@ -39,8 +39,8 @@ const testimonials = [
     role: "Handmaid",
     source: "The Handmaid's Tale",
     image: "https://imgix.bustle.com/2017/4/20/17e60f76-757a-40ff-a10e-81913aa87893.jpg?w=1200&h=1200&fit=crop&crop=faces&fm=jpg",
-    before: "During my time in Gilead, I went to the Commander's room frequently. Every step was a risk — Serena Joy could catch me at any moment.",
-    after: "With the STOP-watch, I could freeze time to ensure that I make it in undetected by anyone. While in the room, I could snoop around and dig for any information on the outside world, giving me a better understanding of what is truly going on.\n\nFor the first time, I had control."
+    before: "During my time in Gilead, I went to the Commander's room frequently. Every step was a risk. Serena Joy could catch me at any moment.",
+    after: "With FreezeFrame, I could freeze time to ensure that I make it in undetected by anyone. While in the room, I could snoop around and dig for any information on the outside world, giving me a better understanding of what is truly going on.\n\nFor the first time, I had control."
   }
 ];
 
@@ -48,7 +48,7 @@ const CharacterTestimonials = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
-    <section ref={sectionRef} id="testimonials" className="py-32 bg-black text-white relative overflow-hidden">
+    <section ref={sectionRef} id="testimonials" className="py-20 bg-black text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-cyan-500/10 via-transparent to-cyan-500/10" />
       </div>
@@ -72,7 +72,7 @@ const CharacterTestimonials = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-16">
+        <div className="space-y-12">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -105,28 +105,41 @@ const CharacterTestimonials = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
-                <div className="p-8 md:p-12 bg-red-500/5">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="px-4 py-2 bg-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider border border-red-500/30">
-                      BEFORE STOP-watch:
-                    </span>
+              {testimonial.before ? (
+                <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
+                  <div className="p-8 md:p-12 bg-red-500/5">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="px-4 py-2 bg-red-500/20 text-red-400 text-xs font-bold uppercase tracking-wider border border-red-500/30">
+                        BEFORE FreezeFrame:
+                      </span>
+                    </div>
+                    <p className="text-gray-300 leading-relaxed text-sm whitespace-pre-line">
+                      "{testimonial.before}"
+                    </p>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-sm whitespace-pre-line">
-                    "{testimonial.before}"
-                  </p>
+                  <div className="p-8 md:p-12 bg-green-500/5">
+                    <div className="flex items-center gap-3 mb-6">
+                      <span className="px-4 py-2 bg-green-500/20 text-green-400 text-xs font-bold uppercase tracking-wider border border-green-500/30">
+                        WITH FreezeFrame:
+                      </span>
+                    </div>
+                    <p className="text-gray-300 leading-relaxed text-sm whitespace-pre-line">
+                      "{testimonial.after}"
+                    </p>
+                  </div>
                 </div>
+              ) : (
                 <div className="p-8 md:p-12 bg-green-500/5">
                   <div className="flex items-center gap-3 mb-6">
                     <span className="px-4 py-2 bg-green-500/20 text-green-400 text-xs font-bold uppercase tracking-wider border border-green-500/30">
-                      WITH STOP-watch:
+                      WITH FreezeFrame:
                     </span>
                   </div>
                   <p className="text-gray-300 leading-relaxed text-sm whitespace-pre-line">
                     "{testimonial.after}"
                   </p>
                 </div>
-              </div>
+              )}
 
             </motion.div>
           ))}

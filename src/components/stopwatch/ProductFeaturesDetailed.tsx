@@ -17,7 +17,7 @@ const features = [
   },
   {
     title: "MENTAL CLARITY",
-    description: "Five minutes might not sound like much, but when the world is silent and still, it's enough to:",
+    description: "Five minutes might not sound like much, but when the world is silent and still, it gives you the opportunity to:",
     points: [
       "Process intense emotions",
       "Make life-changing decisions",
@@ -31,7 +31,7 @@ const ProductFeaturesDetailed = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
-    <section ref={sectionRef} id="product-features-detailed" className="min-h-screen bg-[#232025] text-[#d1d1d1] py-[15vh] px-[6vw]">
+    <section ref={sectionRef} id="product-features-detailed" className="bg-[#232025] text-[#d1d1d1] py-[8vh] px-[6vw]">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const ProductFeaturesDetailed = () => {
         className="text-center mb-[10vh]"
       >
         <h2
-          className="text-[5vw] md:text-[7vw] font-bold uppercase mb-[4vh] leading-tight"
+          className="text-[4vw] md:text-[5vw] font-bold uppercase mb-[3vh] leading-tight"
           style={{ fontFamily: "'Audiowide', sans-serif" }}
         >
           How It Works

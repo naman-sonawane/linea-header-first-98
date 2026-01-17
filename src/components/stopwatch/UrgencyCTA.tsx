@@ -28,7 +28,7 @@ const UrgencyCTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="urgency-cta" className="min-h-screen bg-[#232025] text-[#d1d1d1] py-[15vh] px-[6vw] flex flex-col justify-center items-center text-center">
+    <section ref={sectionRef} id="urgency-cta" className="bg-[#232025] text-[#d1d1d1] py-[8vh] px-[6vw] flex flex-col justify-center items-center text-center">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ const UrgencyCTA = () => {
         className="max-w-[80vw] mx-auto"
       >
         <h2
-          className="text-[6vw] md:text-[8vw] font-bold uppercase mb-[4vh] leading-tight"
+          className="text-[4vw] md:text-[6vw] font-bold uppercase mb-[3vh] leading-tight"
           style={{ fontFamily: "'Audiowide', sans-serif" }}
         >
           How Many Tragedies Could You Prevent?
@@ -47,8 +47,7 @@ const UrgencyCTA = () => {
           <p>Hamlet killed six people because he didn't pause to look behind the curtain.</p>
           <p>Kiner-Falefa was inches from winning the World Series but couldn't give himself half a second more.</p>
           <p>Jeff Hoffman threw one hanging slider and lost the championship.</p>
-          <p>Werner stepped on a landmine with no way out.</p>
-          <p>Malcolm was pulled under by an undertow with no time to escape.</p>
+          <p>Werner made a bad decision to cross that field and died instantly.</p>
           <p className="text-cyan-400 font-bold text-[2vw] mt-[3vh]">Don't wait until it's too late.</p>
         </div>
 
@@ -62,12 +61,12 @@ const UrgencyCTA = () => {
             className="bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-[2vw] px-[6vw] py-[3vh] rounded-none uppercase tracking-wider transition-all duration-300"
             style={{ fontFamily: "'Audiowide', sans-serif" }}
           >
-            Get Your STOP-watch Today →
+            Get Your FreezeFrame Today →
           </Button>
         </motion.div>
 
         <p className="cta-element text-[1.2vw] text-gray-500 mt-[3vh]">
-          Limited quantities available. Time waits for no one — except STOP-watch owners.
+          Limited quantities available. Time waits for no one, except FreezeFrame owners.
         </p>
       </motion.div>
     </section>
