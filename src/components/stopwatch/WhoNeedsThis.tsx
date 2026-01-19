@@ -20,7 +20,7 @@ const useCases = [
   },
   {
     title: "FOR THOSE IN DANGER",
-    description: "Whether rebels, undertows, or threats — escape before it's too late"
+    description: "Whether rebels, undertows, or threats, escape before it's too late"
   },
   {
     title: "FOR THE OVERWHELMED",

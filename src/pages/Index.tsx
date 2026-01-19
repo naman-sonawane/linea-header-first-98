@@ -303,7 +303,7 @@ const Index = () => {
               id="hero-subtitle"
               className="text-xl md:text-2xl font-light leading-relaxed text-[#adadad] mb-6 max-w-2xl"
             >
-              An entirely new device — made to freeze time.
+              A revolutionary device that stops time.
             </h2>
 
             <h4

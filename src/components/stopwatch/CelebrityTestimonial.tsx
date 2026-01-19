@@ -6,14 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const celebrities = [
-  {
-    name: "JEFF HOFFMAN",
-    title: "MLB Pitcher, Toronto Blue Jays",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Jeff_Hoffman_%289tZfLF_3qzU%29.png",
-    quote: "In high-stakes moments, timing is everything. FreezeFrame gives me the clarity I need to make the right decisions when seconds matter most."
-  }
-];
+const celebrities: Array<{ name: string; title: string; image: string; quote: string }> = [];
 
 const CelebrityTestimonial = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -66,6 +59,7 @@ const CelebrityTestimonial = () => {
           </h2>
         </motion.div>
 
+        {celebrities.length > 0 && (
         <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {celebrities.map((celebrity, index) => (
             <motion.div
@@ -110,6 +104,7 @@ const CelebrityTestimonial = () => {
             </motion.div>
           ))}
         </div>
+        )}
       </div>
     </section>
   );

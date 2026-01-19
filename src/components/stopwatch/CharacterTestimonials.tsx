@@ -7,15 +7,15 @@ const testimonials = [
     role: "Diamond miner, father",
     source: "Blood Diamond",
     image: "https://www.spiritualityandpractice.com/uploads/film_reviews/images/blooddiamondlrg5.jpg",
-    before: "My son Dia was brainwashed by rebels. When I finally found him, he didn't recognize me. Rebels pointed guns at me. I had no time to talk to him privately, to remind him who he really was. I was desperate, and any wrong move meant death for both of us.",
-    after: "I froze time the moment I saw Dia pointing a gun at me. Those 5 minutes alone with my son, no rebels watching, no pressure, I held him and reminded him of our village, our family, the stories I used to tell him. When time resumed, he lowered the gun. He came home with me. We're together now."
+    before: "My family was split apart by the conflict in Sierra Leone. My son Dia was captured by a rebel group and brainwashed. When I found him with other rebels, he pretended not to recognize me. Dia caused a scene, resulting in multiple rebels pointing their guns at me. I had no time to act, and any wrong move meant death for both of us.",
+    after: "Instead of rushing into a group of rebels, I froze time for everyone but me and Danny Archer. This gave us the opportunity to pull Dia out while everyone is frozen. This way, I got Dia out without getting captured, and Danny did not have to free us. Danny avoided his tragic ending because he never ended up in the situation he was in when he died."
   },
   {
     name: "HAMLET",
     role: "Prince of Denmark",
     source: "Hamlet",
     image: "https://i.imgur.com/4Mjort6.jpeg",
-    before: null,
+    before: "I heard a noise behind the tapestry when speaking to my mother. I acted before I thought, stabbing through the curtain without knowing who was there. This resulted in the death of Polonius, which sent Ophelia into madness, leading her to possibly commit suicide. This also resulted in Laertes challenging me to the death, causing both of us to die, as well as Gertrude in the process.",
     after: "With FreezeFrame, when I heard the noise behind the tapestry, I could freeze time. I'd look behind the curtain to see who is there. Those five minutes would give me time to meditate on what my next course of action would be.\n\nThis prevents Ophelia's madness, Polonius's death, Laertes' and my deaths, and Gertrude's death. The battle would never occur."
   },
   {
@@ -31,8 +31,8 @@ const testimonials = [
     role: "German soldier",
     source: "All the Light We Cannot See",
     image: "https://i.imgur.com/1vdQJd8.png",
-    before: "I stepped on a landmine. Once I took the weight off, the mine would go off and I would die. There was no escape.",
-    after: "With the FreezeFrame, I froze time, giving me the ability to step off the landmine with no consequences and get far enough away from the mine to not be affected by the explosion once time resumes."
+    before: "I was about to cross a field when an American soldier warned me and told me to halt. I didn't stop to think about why he might be telling me to stop. I stepped on a landmine and was blown up instantly. I died because I didn't have time to process the warning.",
+    after: "With the FreezeFrame, I was able to freeze time, giving me the ability to stop and think about why the American soldier might be telling me to stop. I could choose to not cross the field, so I would not die, avoiding my tragic ending."
   },
   {
     name: "OFFRED",

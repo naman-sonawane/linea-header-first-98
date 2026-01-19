@@ -46,7 +46,6 @@ const UrgencyCTA = () => {
         <div className="cta-element text-[1.5vw] text-[#adadad] leading-relaxed space-y-[2vh] mb-[6vh] text-left max-w-[70vw] mx-auto">
           <p>Hamlet killed six people because he didn't pause to look behind the curtain.</p>
           <p>Kiner-Falefa was inches from winning the World Series but couldn't give himself half a second more.</p>
-          <p>Jeff Hoffman threw one hanging slider and lost the championship.</p>
           <p>Werner made a bad decision to cross that field and died instantly.</p>
           <p className="text-cyan-400 font-bold text-[2vw] mt-[3vh]">Don't wait until it's too late.</p>
         </div>

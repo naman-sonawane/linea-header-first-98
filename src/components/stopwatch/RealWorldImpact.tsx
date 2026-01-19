@@ -15,20 +15,6 @@ const athletes = [
       title: "Protect His Reputation",
       text: "I received so much hate following the game for my decision to start farther away from the base, which led to me not making it in time. My image was destroyed overnight. With those five frozen seconds, I could have changed my approach. I wouldn't be known as the guy who cost Toronto the World Series."
     }
-  },
-  {
-    name: "JEFF HOFFMAN",
-    role: "MLB Pitcher, Toronto Blue Jays",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Jeff_Hoffman_%289tZfLF_3qzU%29.png",
-    moment: "November 1st, 2025. Game 7 of the World Series. Jeff Hoffman was two outs away from giving the Toronto Blue Jays their first championship since 1993. Toronto leading 4-3 in the 9th inning. Hoffman threw a hanging slider to Dodgers second baseman Miguel Rojas, who hit a game-tying home run. The Dodgers won 5-4 in 11 innings.",
-    help1: {
-      title: "Perfect the Crucial Pitch",
-      text: "With two outs and a 3-2 count, FreezeFrame would have let me: Recognize the slider was hanging before releasing it and adjust my grip or switch pitches entirely. Process that Rojas was sitting on the slider and choose a different pitch selection. Calm my nerves in the highest-pressure moment of my career without the ticking clock. Visualize perfect execution rather than rushing the most important pitch of my life. One perfect pitch and Toronto wins the World Series. I'm a hero instead of the guy who blew it."
-    },
-    help2: {
-      title: "Mental Recovery & Career Reputation",
-      text: "After giving up the home run, I was devastated in front of 50,000 fans and millions watching. I told reporters: 'I cost everybody here a World Series ring. It feels pretty shitty.' With time-freeze, I could have: Mentally reset before the game went to extra innings, potentially staying in to pitch and redeem myself. Processed the devastating mistake without spiraling emotionally in public. Protected my reputation. I'm now forever known as the closer who blew the World Series rather than the hero who won it. As I enter 2026, fans and media will constantly reference this moment. Five minutes could have saved my legacy."
-    }
   }
 ];
 

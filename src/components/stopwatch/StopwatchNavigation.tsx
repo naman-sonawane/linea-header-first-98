@@ -6,17 +6,17 @@ const FreezeFrameNavigation = () => {
 
   const navItems = [
     { name: "FEATURES", href: "#features-section" },
-    { name: "TESTIMONIALS", href: "#page3" },
-    { name: "PRODUCTS", href: "#page7" }
+    { name: "TESTIMONIALS", href: "#testimonials" },
+    { name: "PRODUCTS", href: "#product-models" }
   ];
 
   const scrollTo = (href: string) => {
     const element = document.querySelector(href);
     const locoScroll = (window as any).locoScroll;
     if (element && locoScroll) {
-      locoScroll.scrollTo(element);
+      locoScroll.scrollTo(element, { duration: 1000, easing: [0.25, 0.0, 0.35, 1.0] });
     } else if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     setIsMenuOpen(false);
     setFlag(0);
@@ -55,8 +55,9 @@ const FreezeFrameNavigation = () => {
             id="menu"
             className="w-[2vw] h-[1.6vh] flex flex-col items-start justify-between cursor-pointer"
             onClick={() => {
-              setFlag(flag === 0 ? 1 : 0);
-              setIsMenuOpen(flag === 0);
+              const newFlag = flag === 0 ? 1 : 0;
+              setFlag(newFlag);
+              setIsMenuOpen(newFlag === 1);
             }}
           >
             <div
@@ -87,29 +88,57 @@ const FreezeFrameNavigation = () => {
 
       <div
         id="topmenu"
-        className="bg-[#cecece] w-full h-screen fixed z-[10] text-[#2b2b2b] border-t border-black transition-all duration-[1800ms]"
+        className="bg-[#cecece] w-full h-screen fixed z-[100] text-[#2b2b2b] border-t border-black transition-all duration-[1800ms] overflow-hidden isolate"
         style={{
           transform: isMenuOpen ? "translateY(0)" : "translateY(-100%)",
-          transitionTimingFunction: "cubic-bezier(0.19, 1, 0.22, 1)"
+          transitionTimingFunction: "cubic-bezier(0.19, 1, 0.22, 1)",
+          willChange: "transform"
         }}
       >
-        <h1
-          className="text-[13.5vw] mt-[15.7vh] ml-[4.8vw] tracking-[-1vw] uppercase"
-          style={{ fontFamily: "'Audiowide', sans-serif" }}
-        >
-          Menu
-        </h1>
-        <div id="opt" className="h-[45vh] w-[45vw] ml-[5.5vw] mt-[5vh] flex flex-col flex-wrap">
-          {navItems.map((item) => (
-            <h4
-              key={item.name}
-              className="text-[1.8vw] mb-[2.2vh] font-medium cursor-pointer w-[15vw]"
+        <div className="relative h-full w-full">
+          <div className="absolute top-0 left-0 right-0 h-[10vh] bg-[#cecece] border-b border-[#2b2b2b]/20 flex items-center justify-between px-[5.8vw] z-20">
+            <h1
+              className="text-[1.1vw] tracking-[0.5vw] uppercase font-light"
               style={{ fontFamily: "'Audiowide', sans-serif" }}
-              onClick={() => scrollTo(item.href)}
             >
-              {item.name}
-            </h4>
-          ))}
+              FreezeFrame
+            </h1>
+            <button
+              onClick={() => {
+                setIsMenuOpen(false);
+                setFlag(0);
+              }}
+              className="text-[#2b2b2b] hover:opacity-70 transition-opacity text-[2vw] font-light"
+              aria-label="Close menu"
+            >
+              ×
+            </button>
+          </div>
+          
+          <h1
+            className="text-[13.5vw] mt-[15.7vh] ml-[4.8vw] tracking-[-1vw] uppercase absolute pointer-events-none opacity-10"
+            style={{ fontFamily: "'Audiowide', sans-serif" }}
+          >
+            Menu
+          </h1>
+          
+          <div className="absolute top-[15.7vh] left-[4.8vw] z-10">
+            <p className="text-[1.2vw] text-[#2b2b2b]/60 mb-[4vh] font-light">
+              A revolutionary device that stops time.
+            </p>
+            <div id="opt" className="flex flex-col gap-[2.2vh] mt-[5vh]">
+              {navItems.map((item) => (
+                <h4
+                  key={item.name}
+                  className="text-[1.8vw] font-medium cursor-pointer relative z-10 hover:opacity-70 transition-opacity"
+                  style={{ fontFamily: "'Audiowide', sans-serif" }}
+                  onClick={() => scrollTo(item.href)}
+                >
+                  {item.name}
+                </h4>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
