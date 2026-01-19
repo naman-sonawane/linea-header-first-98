@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +47,24 @@ const models = [
 
 const ProductModels = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
+  const handleAddToCart = (model: typeof models[0], index: number) => {
+    const priceValue = model.price.replace('$', '');
+    const priceInEuros = `€${priceValue}`;
+    addToCart({
+      id: 1000 + index,
+      name: `FreezeFrame ${model.name}`,
+      price: priceInEuros,
+      image: "/watch.jpeg",
+      category: "Watches"
+    });
+    toast({
+      title: "Added to bag",
+      description: `${model.name} added to your shopping bag`,
+    });
+  };
 
   return (
     <section ref={sectionRef} id="product-models" className="min-h-screen bg-[#232025] text-[#d1d1d1] py-[15vh] px-[6vw]">
@@ -114,6 +134,7 @@ const ProductModels = () => {
                     : "bg-transparent hover:bg-white/10 text-white border-white/20 hover:border-white/40"
                 }`}
                 style={{ fontFamily: "'Audiowide', sans-serif" }}
+                onClick={() => handleAddToCart(model, index)}
               >
                 ORDER NOW
               </Button>

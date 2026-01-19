@@ -218,7 +218,7 @@ const HeroSection = () => {
                 transition={{
                   duration: 15 + i * 5,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "FreezeFramer"
                 }}
               />
             ))}

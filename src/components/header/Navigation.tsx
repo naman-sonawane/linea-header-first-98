@@ -4,18 +4,7 @@ import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ShoppingBag from "./ShoppingBag";
-import pantheonImage from "@/assets/pantheon.jpg";
-import eclipseImage from "@/assets/eclipse.jpg";
-import haloImage from "@/assets/halo.jpg";
-
-interface CartItem {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-  quantity: number;
-  category: string;
-}
+import { useCart } from "@/contexts/CartContext";
 
 const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -24,47 +13,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isShoppingBagOpen, setIsShoppingBagOpen] = useState(false);
   
-  // Shopping bag state with 3 mock items
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: 1,
-      name: "Pantheon",
-      price: "€2,850",
-      image: pantheonImage,
-      quantity: 1,
-      category: "Earrings"
-    },
-    {
-      id: 2,
-      name: "Eclipse",
-      price: "€3,200", 
-      image: eclipseImage,
-      quantity: 1,
-      category: "Bracelets"
-    },
-    {
-      id: 3,
-      name: "Halo",
-      price: "€1,950",
-      image: haloImage, 
-      quantity: 1,
-      category: "Earrings"
-    }
-  ]);
-
-  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-  
-  const updateQuantity = (id: number, newQuantity: number) => {
-    if (newQuantity <= 0) {
-      setCartItems(items => items.filter(item => item.id !== id));
-    } else {
-      setCartItems(items => 
-        items.map(item => 
-          item.id === id ? { ...item, quantity: newQuantity } : item
-        )
-      );
-    }
-  };
+  const { cartItems, updateQuantity, totalItems } = useCart();
   
   // Preload dropdown images for faster display
   useEffect(() => {
@@ -189,8 +138,8 @@ const Navigation = () => {
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <Link to="/" className="block">
             <img 
-              src="/LINEA-1.svg" 
-              alt="LINEA" 
+              src="/FreezeFrame-1.svg" 
+              alt="FreezeFrame" 
               className="h-6 w-auto"
             />
           </Link>

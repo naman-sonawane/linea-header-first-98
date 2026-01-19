@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
   Breadcrumb, 
@@ -10,12 +10,34 @@ import {
   BreadcrumbSeparator 
 } from "@/components/ui/breadcrumb";
 import { Minus, Plus } from "lucide-react";
+import { useCart } from "@/contexts/CartContext";
+import { useToast } from "@/hooks/use-toast";
+import pantheonImage from "@/assets/pantheon.jpg";
 
 const ProductInfo = () => {
   const [quantity, setQuantity] = useState(1);
+  const { productId } = useParams();
+  const { addToCart } = useCart();
+  const { toast } = useToast();
 
   const incrementQuantity = () => setQuantity(prev => prev + 1);
   const decrementQuantity = () => setQuantity(prev => Math.max(1, prev - 1));
+
+  const handleAddToCart = () => {
+    for (let i = 0; i < quantity; i++) {
+      addToCart({
+        id: productId ? parseInt(productId) : 1,
+        name: "Pantheon",
+        price: "€2,850",
+        image: pantheonImage,
+        category: "Earrings"
+      });
+    }
+    toast({
+      title: "Added to bag",
+      description: `${quantity} item${quantity > 1 ? 's' : ''} added to your shopping bag`,
+    });
+  };
 
   return (
     <div className="space-y-6">
@@ -107,6 +129,7 @@ const ProductInfo = () => {
 
         <Button 
           className="w-full h-12 bg-foreground text-background hover:bg-foreground/90 font-light rounded-none"
+          onClick={handleAddToCart}
         >
           Add to Bag
         </Button>

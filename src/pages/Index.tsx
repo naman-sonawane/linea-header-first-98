@@ -137,7 +137,7 @@ const Index = () => {
     slideTexts1.forEach((elem) => {
       gsap.to(elem, {
         transform: "translateX(-96%)",
-        ease: "linear",
+        ease: "FreezeFramer",
         duration: 4,
         scrollTrigger: {
           trigger: "#slide-section",
@@ -151,7 +151,7 @@ const Index = () => {
     slideTexts2.forEach((elem) => {
       gsap.to(elem, {
         transform: "translateX(0%)",
-        ease: "linear",
+        ease: "FreezeFramer",
         duration: 4,
         scrollTrigger: {
           trigger: "#slide-section",
@@ -168,7 +168,7 @@ const Index = () => {
         rotate: 360,
         repeat: -1,
         duration: 2.5,
-        ease: "linear"
+        ease: "FreezeFramer"
       });
     }
 
