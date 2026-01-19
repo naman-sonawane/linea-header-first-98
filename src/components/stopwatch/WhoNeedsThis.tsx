@@ -62,7 +62,7 @@ const WhoNeedsThis = () => {
           className="text-[5vw] md:text-[7vw] font-bold uppercase mb-[4vh] leading-tight"
           style={{ fontFamily: "'Audiowide', sans-serif" }}
         >
-          Who Is The STOP-watch For?
+          Who Is The FreezeFrame For?
         </h2>
       </motion.div>
 

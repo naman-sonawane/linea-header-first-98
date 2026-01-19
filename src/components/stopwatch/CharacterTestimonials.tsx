@@ -32,7 +32,7 @@ const testimonials = [
     source: "All the Light We Cannot See",
     image: "https://i.imgur.com/1vdQJd8.png",
     before: "I stepped on a landmine. Once I took the weight off, the mine would go off and I would die. There was no escape.",
-    after: "With the STOP-watch, I froze time, giving me the ability to step off the landmine with no consequences and get far enough away from the mine to not be affected by the explosion once time resumes."
+    after: "With the FreezeFrame, I froze time, giving me the ability to step off the landmine with no consequences and get far enough away from the mine to not be affected by the explosion once time resumes."
   },
   {
     name: "OFFRED",
